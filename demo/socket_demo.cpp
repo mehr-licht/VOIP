@@ -60,23 +60,15 @@ int main(int argc, char *argv[]) {
         exit(-1);
       }
 
-      // voip_toolbox::Ipv4SocketAddress addr("", port.getValue());
-      voip_toolbox::Ipv4SocketAddress raddr(destIp.getValue(), rport.getValue());
+      util::Ipv4SocketAddress raddr(destIp.getValue(), rport.getValue());
 
-      voip_toolbox::UdpSocket s;
+      util::UdpSocket s;
       s.open();
 
       if (s.isOpen()) {
         std::cerr << "Socket is open. Sending 'hello' to " << raddr.toString(true) << std::endl;
       }
 
-      /* If sender is used as sender only it does not need to bind the socket
-      if (!s.bind(addr)) {
-        std::cerr << "Error binding socket!" << std::endl;
-        s.close();
-        exit(-1);
-      }
-      */
       const char* hellostr = "hello";
       std::vector<uint8_t> data(hellostr, hellostr + strlen(hellostr));
       uint32_t send_cnt = 0, i = 0;
@@ -88,8 +80,8 @@ int main(int argc, char *argv[]) {
       s.close();
 
     } else {
-      voip_toolbox::Ipv4SocketAddress addr("", port.getValue());
-      voip_toolbox::UdpSocket s;
+      util::Ipv4SocketAddress addr("", port.getValue());
+      util::UdpSocket s;
       s.open();
 
       if (s.isOpen()) {
@@ -104,7 +96,7 @@ int main(int argc, char *argv[]) {
 
       while (true) {
         std::vector<uint8_t> data(128, 0);
-        voip_toolbox::Ipv4SocketAddress from;
+        util::Ipv4SocketAddress from;
         s.recvfrom(from, data, 128);
 
         std::cerr << "Received " << data.size() << " bytes from " << from.toString(true) << std::endl;

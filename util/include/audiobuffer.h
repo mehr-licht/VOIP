@@ -41,7 +41,7 @@
 #include <stdint.h>
 #include <vector>
 
-namespace voip_toolbox {
+namespace util {
 
 /* A very simple implementation of an audio buffer class. */
 class AudioBuffer {

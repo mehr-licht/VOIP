@@ -35,9 +35,9 @@
  */
 /******************************************************************************/
 
-#include "voip_application.h"
+#include "voip_comm.h"
 
 int main(int argc, char *argv[]) {
-  voip::Application app;
-  return app.exec(argc, argv);
+  VoIPComm communicator;
+  return communicator.exec(argc, argv);
 }

@@ -101,19 +101,19 @@ private:
 /******************************************************************************/
 /* SimplePlayback class */
 /******************************************************************************/
-class SimplePlayback : public voip::AudioInputOutputProcessor {
+class SimplePlayback : public util::AudioIO {
 public:
   SimplePlayback();
   ~SimplePlayback();
 
-  int process(voip_toolbox::AudioBuffer& output, voip_toolbox::AudioBuffer const& input);
+  int process(util::AudioBuffer& output, util::AudioBuffer const& input);
 
   bool init(unsigned int sr, unsigned int nch, unsigned int toneGen);
   bool start();
   bool stop();
 
 private:
-  voip::SoundCard           soundcard_;
+  util::SoundCard           soundcard_;
   bool                      playing_;
   unsigned int              sr_;
   unsigned int              fs_;
@@ -133,7 +133,7 @@ SimplePlayback::~SimplePlayback() {
 bool SimplePlayback::init(unsigned int sr, unsigned int nch, unsigned int toneGen) {
 
   sr_                            = sr;
-  soundcard_.init(-1, -1, 1, 1, sr_, fs_, voip_toolbox::AudioBuffer::FLOAT32);
+  soundcard_.init(-1, -1, 1, 1, sr_, fs_, util::AudioBuffer::FLOAT32);
 
   if (tg_)
     delete tg_;
@@ -161,7 +161,7 @@ bool SimplePlayback::stop() {
   return soundcard_.stop();
 }
 
-int SimplePlayback::process(voip_toolbox::AudioBuffer& output, voip_toolbox::AudioBuffer const& input) {
+int SimplePlayback::process(util::AudioBuffer& output, util::AudioBuffer const& input) {
   float *buf = (float*) output.data();
 
 

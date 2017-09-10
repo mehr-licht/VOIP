@@ -41,10 +41,10 @@
 
 #include "soundcard.h"
 
-namespace voip {
+namespace util {
 
 // Pure viruals need a destructor implementation
-AudioInputOutputProcessor::~AudioInputOutputProcessor() {}
+AudioIO::~AudioIO() {}
 
 // Helper functions
 static std::string supportedSampleTypes(RtAudio::DeviceInfo const& info) {
@@ -60,20 +60,20 @@ static std::string supportedSampleTypes(RtAudio::DeviceInfo const& info) {
 
 // Internal implementation
 struct SoundCard::SoundCardImpl {
-  SoundCardImpl(AudioInputOutputProcessor *audioIoProcessor);
+  SoundCardImpl(AudioIO *audioIo);
   ~SoundCardImpl();
 
   int callback(void *outBuf, void *inBuf, unsigned int nFrames, double streamTime, RtAudioStreamStatus status);
 
-  AudioInputOutputProcessor*              audioIO_;
+  AudioIO*                                audioIO_;
   RtAudio                                 audio_;
   RtAudio::StreamParameters               inputParameters_;
   RtAudio::StreamParameters               outputParameters_;
   unsigned int                            sr_;
   unsigned int                            fs_;
-  voip_toolbox::AudioBuffer::SampleFormat fmt_;
-  voip_toolbox::AudioBuffer               inputBuffer_;
-  voip_toolbox::AudioBuffer               outputBuffer_;
+  util::AudioBuffer::SampleFormat         fmt_;
+  util::AudioBuffer                       inputBuffer_;
+  util::AudioBuffer                       outputBuffer_;
   bool                                    initialized_;
   bool                                    running_;
 
@@ -81,14 +81,14 @@ struct SoundCard::SoundCardImpl {
                               double streamTime, RtAudioStreamStatus status, void *userData);
 };
 
-SoundCard::SoundCardImpl::SoundCardImpl(AudioInputOutputProcessor *audioIoProcessor)
-  : audioIO_(audioIoProcessor),
+SoundCard::SoundCardImpl::SoundCardImpl(AudioIO *audioIo)
+  : audioIO_(audioIo),
     audio_(),
     inputParameters_(),
     outputParameters_(),
     sr_(0),
     fs_(0),
-    fmt_(voip_toolbox::AudioBuffer::UNKNOWN),
+    fmt_(util::AudioBuffer::UNKNOWN),
     inputBuffer_(),
     outputBuffer_(),
     initialized_(false),
@@ -99,7 +99,7 @@ SoundCard::SoundCardImpl::SoundCardImpl(AudioInputOutputProcessor *audioIoProces
 SoundCard::SoundCardImpl::~SoundCardImpl() {
 }
 
-int SoundCard::SoundCardImpl::callback(void *outBuf, void *inBuf, unsigned int nFrames, 
+int SoundCard::SoundCardImpl::callback(void *outBuf, void *inBuf, unsigned int nFrames,
                                        double streamTime, RtAudioStreamStatus status)
 {
   if (nFrames != fs_) {
@@ -157,8 +157,8 @@ void SoundCard::listDevices() {
 }
 
 // SoundCard implementation
-SoundCard::SoundCard(AudioInputOutputProcessor *audioIoProcessor)
-  : impl_(new SoundCardImpl(audioIoProcessor))
+SoundCard::SoundCard(AudioIO *audioIo)
+  : impl_(new SoundCardImpl(audioIo))
 {}
 
 SoundCard::~SoundCard() {
@@ -167,13 +167,13 @@ SoundCard::~SoundCard() {
 
 bool SoundCard::init(int inDev, int outDev, unsigned int inCh,
                      unsigned int outCh, unsigned int sr,
-                     unsigned int fs, voip_toolbox::AudioBuffer::SampleFormat sampleFormat)
+                     unsigned int fs, util::AudioBuffer::SampleFormat sampleFormat)
 {
   if (inCh == 0 || // Ususally you could signal non-duplex mode by setting nCh to 0
       outCh == 0 ||
       sr == 0 ||
       fs == 0 ||
-      sampleFormat == voip_toolbox::AudioBuffer::UNKNOWN)
+      sampleFormat == util::AudioBuffer::UNKNOWN)
     return false;
 
     if (inDev < 0)
@@ -205,10 +205,10 @@ bool SoundCard::init(int inDev, int outDev, unsigned int inCh,
     RtAudioFormat rtaudiofmt;
 
     switch (impl_->fmt_) {
-      case voip_toolbox::AudioBuffer::INT16:
+      case util::AudioBuffer::INT16:
         rtaudiofmt = RTAUDIO_SINT16;
       break;
-      case voip_toolbox::AudioBuffer::FLOAT32:
+      case util::AudioBuffer::FLOAT32:
         rtaudiofmt = RTAUDIO_FLOAT32;
       break;
       default:

@@ -40,12 +40,12 @@
 
 #include "audiobuffer.h"
 
-namespace voip {
+namespace util {
 
-class AudioInputOutputProcessor {
+class AudioIO {
 public:
-  virtual ~AudioInputOutputProcessor() = 0;
-  virtual int process(voip_toolbox::AudioBuffer& output, voip_toolbox::AudioBuffer const& input) = 0;
+  virtual ~AudioIO() = 0;
+  virtual int process(util::AudioBuffer& output, util::AudioBuffer const& input) = 0;
 };
 
 class SoundCard {
@@ -53,17 +53,17 @@ public:
   static void listDevices();
 
 public:
-  SoundCard(AudioInputOutputProcessor *audioIoProcessor);
+  SoundCard(AudioIO *audioIo);
   ~SoundCard();
-  
+
   bool init(int inDev, int outDev, unsigned int inCh, unsigned int outCh, unsigned int sr,
-            unsigned int fs, voip_toolbox::AudioBuffer::SampleFormat sampleFormat);
+            unsigned int fs, util::AudioBuffer::SampleFormat sampleFormat);
   bool start();
   bool stop();
 
 private:
   struct SoundCardImpl;
-  SoundCardImpl *impl_;  
+  SoundCardImpl *impl_;
 };
 
 }

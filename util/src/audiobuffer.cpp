@@ -39,7 +39,7 @@
 
 #include <iostream>
 
-namespace voip_toolbox {
+namespace util {
 
 AudioBuffer::AudioBuffer()
   : frameSize_(0),

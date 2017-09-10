@@ -48,7 +48,7 @@
 #include <winsock2.h>
 #include <ws2tcpip.h>
 
-namespace voip_toolbox {
+namespace util {
 
 /* Startup Windows sockets */
 static inline int32_t InitWinsock() {

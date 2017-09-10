@@ -54,7 +54,7 @@
 #include <string>
 #include <sstream>
 
-namespace voip_toolbox {
+namespace util {
 
 /******************************************************************************/
 /* class SocketAddress */

@@ -37,17 +37,15 @@
 
 #include <iostream>
 
-#include "voip_application.h"
+#include "voip_comm.h"
 #include "soundcard.h"
 
 #include "tclap/CmdLine.h"
 
-namespace voip {
+VoIPComm::VoIPComm() {}
+VoIPComm::~VoIPComm() {}
 
-Application::Application() {}
-Application::~Application() {}
-
-int Application::exec(int argc, char *argv[]) {
+int VoIPComm::exec(int argc, char *argv[]) {
 
   if (!init(argc, argv)) {
     std::cerr << "Error initializing!" << std::endl;
@@ -59,7 +57,7 @@ int Application::exec(int argc, char *argv[]) {
   return 0;
 }
 
-bool Application::init(int argc, char *argv[]) {
+bool VoIPComm::init(int argc, char *argv[]) {
 
   /* Set up command line arguments */
   try {
@@ -108,8 +106,6 @@ bool Application::init(int argc, char *argv[]) {
   return true;
 }
 
-void Application::listDevices() {
-  SoundCard::listDevices();
-}
-
+void VoIPComm::listDevices() {
+  util::SoundCard::listDevices();
 }

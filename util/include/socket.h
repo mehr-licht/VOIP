@@ -42,7 +42,7 @@
 #include <vector>
 #include <stdint.h>
 
-namespace voip_toolbox {
+namespace util {
 
 /******************************************************************************/
 /* class Ipv4SocketAddress */
@@ -78,8 +78,10 @@ private:
 class UdpSocket {
 public:
   UdpSocket();
-  UdpSocket(UdpSocket const& other)            = delete;
-  UdpSocket& operator=(UdpSocket const& other) = delete;
+  UdpSocket(UdpSocket const&)            = delete;
+  UdpSocket(UdpSocket&&)                 = delete;
+  UdpSocket& operator=(UdpSocket const&) = delete;
+  UdpSocket& operator=(UdpSocket&&)      = delete;
   ~UdpSocket();
 
   bool open();

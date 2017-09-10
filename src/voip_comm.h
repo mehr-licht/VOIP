@@ -38,24 +38,20 @@
 #ifndef VOIP_APPLICATION_H
 #define VOIP_APPLICATION_H
 
-namespace voip {
-
 // This is the application entry point
-class Application {
+class VoIPComm {
 public:
-  Application();
-  ~Application();
+  VoIPComm();
+  ~VoIPComm();
+  VoIPComm(VoIPComm const&)            = delete;
+  VoIPComm(VoIPComm&&)                 = delete;
+  VoIPComm& operator=(VoIPComm const&) = delete;
+  VoIPComm& operator=(VoIPComm&&)      = delete;
 
   int exec(int argc, char *argv[]);
-
 private:
-  Application(Application const&);
-  Application& operator=(Application const&);
-
   bool init(int argc, char *argv[]);
   void listDevices();
 };
-
-}
 
 #endif /* VOIP_APPLICATION_H */
