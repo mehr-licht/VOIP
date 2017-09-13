@@ -35,13 +35,15 @@
  */
  /******************************************************************************/
 
-#ifndef VOIP_TOOLBOX_AUDIOBUFFER_H
-#define VOIP_TOOLBOX_AUDIOBUFFER_H
+#ifndef VOIP_UTIL_AUDIOBUFFER_H
+#define VOIP_UTIL_AUDIOBUFFER_H
 
 #include <stdint.h>
 #include <vector>
 
 namespace util {
+
+using ByteBuffer = std::vector<uint8_t>;
 
 /* A very simple implementation of an audio buffer class. */
 class AudioBuffer {
@@ -98,9 +100,9 @@ private:
   uint32_t             nChannels_;
   uint32_t             sampleRate_;
   SampleFormat         format_;
-  std::vector<uint8_t> data_;
+  ByteBuffer           data_;
 };
 
 }
 
-#endif /* VOIP_TOOLBOX_AUDIOBUFFER_H */
+#endif /* VOIP_UTIL_AUDIOBUFFER_H */

@@ -35,8 +35,8 @@
  */
 /******************************************************************************/
 
-#ifndef VOIP_APPLICATION_H
-#define VOIP_APPLICATION_H
+#ifndef VOIP_COMM_H
+#define VOIP_COMM_H
 
 // This is the application entry point
 class VoIPComm {
@@ -54,4 +54,4 @@ private:
   void listDevices();
 };
 
-#endif /* VOIP_APPLICATION_H */
+#endif /* VOIP_COMM_H */

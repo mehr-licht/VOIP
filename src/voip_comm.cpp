@@ -40,6 +40,8 @@
 #include "voip_comm.h"
 #include "soundcard.h"
 
+#include "receiver.h"
+
 #include "tclap/CmdLine.h"
 
 VoIPComm::VoIPComm() {}
@@ -67,19 +69,15 @@ bool VoIPComm::init(int argc, char *argv[]) {
     // This is the only command line argument currently used
     TCLAP::SwitchArg listDevices("l", "list-devices", "List audio devices", cmd, false);
 
-    // These are here for showing what you might need!
-    TCLAP::ValueArg<int> inDev("i", "input-device", "Select input device", false, -1, "int", cmd);
-    TCLAP::ValueArg<int> outDev("o", "output-device", "Select output device", false, -1, "int", cmd);
-
-    TCLAP::ValueArg<unsigned int> inCh("", "inCh", "Number of input channels (default: 1)", false, 1, "unsigned int", cmd);
-    TCLAP::ValueArg<unsigned int> outCh("", "outCh", "Number of output channels (default 1)", false, 1, "unsigned int", cmd);
-
-    TCLAP::ValueArg<unsigned int> fs("f", "Framesize", "Framesize (default: 512)", false, 512, "unsigned int", cmd);
-
-    TCLAP::ValueArg<unsigned int> s("s", "samplerate", "Samplerate (default: 44100)", false, 44100, "unsigned int", cmd);
-
-    TCLAP::ValueArg<unsigned int> rPort("", "rPort", "Remote Port (default: 1976)", false, 1976, "unsigned int", cmd);
-    TCLAP::ValueArg<unsigned int> lPort("", "lPort", "Local Port (default: 1976)", false, 1976, "unsigned int", cmd);
+    // These here show you what you might need
+    TCLAP::ValueArg<int>          inDev( "i", "input-device",  "Select input device",                   false, -1,    "int", cmd);
+    TCLAP::ValueArg<int>          outDev("o", "output-device", "Select output device",                  false, -1,    "int", cmd);
+    TCLAP::ValueArg<unsigned int> inCh(  "",  "inCh",          "Number of input channels (default: 1)", false, 1,     "unsigned int", cmd);
+    TCLAP::ValueArg<unsigned int> outCh( "",  "outCh",         "Number of output channels (default 1)", false, 1,     "unsigned int", cmd);
+    TCLAP::ValueArg<unsigned int> fs(    "f", "Framesize",     "Framesize (default: 512)",              false, 512,   "unsigned int", cmd);
+    TCLAP::ValueArg<unsigned int> s(     "s", "samplerate",    "Samplerate (default: 44100)",           false, 44100, "unsigned int", cmd);
+    TCLAP::ValueArg<unsigned int> rPort( "",  "rPort",         "Remote Port (default: 1976)",           false, 1976,  "unsigned int", cmd);
+    TCLAP::ValueArg<unsigned int> lPort( "",  "lPort",         "Local Port (default: 1976)",            false, 1976,  "unsigned int", cmd);
 
     TCLAP::UnlabeledValueArg<std::string> destIp("destIp", "Destination IP address", false, "", "std::string", cmd);
 
@@ -92,11 +90,11 @@ bool VoIPComm::init(int argc, char *argv[]) {
     }
 
     // if -l is not specified, the IP is mandatory
+    // in order to establish an endpoint connection
     if (destIp.getValue() == "") {
       TCLAP::StdOutput().usage(cmd);
       exit(-1);
     }
-
 
   } catch (TCLAP::ArgException& argEx) {
     std::cerr << "Error parsing command line arguments: " << argEx.error() << " for argument " << argEx.argId() << std::endl;

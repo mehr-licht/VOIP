@@ -35,8 +35,8 @@
  */
  /******************************************************************************/
 
-#ifndef VOIP_TOOLBOX_SOCKET_H
-#define VOIP_TOOLBOX_SOCKET_H
+#ifndef VOIP_UTIL_SOCKET_H
+#define VOIP_UTIL_SOCKET_H
 
 #include <string>
 #include <vector>
@@ -100,4 +100,4 @@ private:
 
 }
 
-#endif /* VOIP_TOOLBOX_SOCKET_H */
+#endif /* VOIP_UTIL_SOCKET_H */
