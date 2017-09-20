@@ -8,7 +8,6 @@ autom4te.cache
 *.kdevses
 compile
 config.guess
-config.h
 config.h.in
 config.log
 config.status
