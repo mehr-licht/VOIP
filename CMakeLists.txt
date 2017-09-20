@@ -25,6 +25,16 @@ if( ${VOIP_BUILD_OPUS} )
 	list( APPEND VOIP_EXT_INC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/ext/opus/include )
 endif()
 
+if( ${CMAKE_SYSTEM_NAME} STREQUAL Windows )
+  set( AUDIO_WINDOWS_WASAPI ON CACHE BOOL "Set WASAPI audio driver for Windows." )
+elseif( ${CMAKE_SYSTEM_NAME} STREQUAL Linux )
+  set( AUDIO_LINUX_ALSA ON CACHE BOOL "Set ALSA audio driver for Linux." )
+elseif( ${CMAKE_SYSTEM_NAME} STREQUAL Darwin )
+  set( AUDIO_OSX_CORE ON CACHE BOOL "Set CoreAudio audio driver for OSX." )
+else()
+  message( FATAL_ERROR "Unknown system." )
+endif()
+
 add_subdirectory( ext/rtaudio )
 add_subdirectory( util )
 
