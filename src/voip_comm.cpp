@@ -44,6 +44,10 @@
 
 #include "tclap/CmdLine.h"
 
+int VoIPComm::process(util::AudioBuffer& output, util::AudioBuffer const& input) {
+  return 0; // This is currently a no-op
+}
+
 VoIPComm::VoIPComm() {}
 VoIPComm::~VoIPComm() {}
 
@@ -53,8 +57,27 @@ int VoIPComm::exec(int argc, char *argv[]) {
     std::cerr << "Error initializing!" << std::endl;
     return -1;
   }
+  std::cout << std::endl;
+  std::cout << "** This is the Application entry point after initialization." << std::endl;
+  std::cout << "** Perform required setup, start the receiver, the sound card and the sender and you should be good to go." << std::endl;
 
-  std::cout << "Hello World!" << std::endl;
+  // Init soundcard and stuff - you can also do this in init.
+  // Wire up all required connections.
+  // Then somewhere, start the receiver (this can also become a member variable - its entirely up to you!)
+  Receiver r;
+  r.start();
+
+  // Start the sound card and process I/O
+  std::cout << " ** Now you should start the soundcard and begin to process I/O." << std::endl;
+  std::cout << " ** Note: because the receiver runs in parallel, you may read this message before the message printed out by the receiver!" << std::endl;
+  std::cout << std::endl;
+  std::cout << std::endl << " ** Actually, this implementation is just a dummy. Press enter to exit..." << std::endl;
+
+  // Just wait for enter
+  char input;
+  std::cin.get(input);
+
+  r.stop();
 
   return 0;
 }

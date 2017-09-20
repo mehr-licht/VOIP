@@ -38,8 +38,10 @@
 #ifndef VOIP_COMM_H
 #define VOIP_COMM_H
 
+#include "soundcard.h"
+
 // This is the application entry point
-class VoIPComm {
+class VoIPComm : public util::AudioIO {
 public:
   VoIPComm();
   ~VoIPComm();
@@ -49,6 +51,10 @@ public:
   VoIPComm& operator=(VoIPComm&&)      = delete;
 
   int exec(int argc, char *argv[]);
+
+  // Callback for Soundcard
+  int process(util::AudioBuffer& output, util::AudioBuffer const& input);
+
 private:
   bool init(int argc, char *argv[]);
   void listDevices();

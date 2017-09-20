@@ -29,7 +29,12 @@ void Receiver::stop() {
 }
 
 void Receiver::receive() {
+  static bool once = true;
   while (running_) {
-    std::cout << "Running the thread..." << std::endl;
+    if (once) {
+      std::cout << " #### Receiver: This is the receiver thread. Read packets from the network and ";
+      std::cout << "push them into JB for further processing. Keep in mind that proper synchronization is necessary." << std::endl;
+      once = false;
+    }
   }
 }
