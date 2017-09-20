@@ -69,7 +69,8 @@ int VoIPComm::exec(int argc, char *argv[]) {
 
   // Start the sound card and process I/O
   std::cout << " ** Now you should start the soundcard and begin to process I/O." << std::endl;
-  std::cout << " ** Note: because the receiver runs in parallel, you may read this message before the message printed out by the receiver!" << std::endl;
+  std::cout << " ** Note: because the receiver runs in parallel, you may read this message before the message printed" << std::endl;
+  std::cout << " ** by the receiver or they may even be interleaved!" << std::endl;
   std::cout << std::endl;
   std::cout << std::endl << " ** Actually, this implementation is just a dummy. Press enter to exit..." << std::endl;
 

@@ -33,7 +33,7 @@ void Receiver::receive() {
   while (running_) {
     if (once) {
       std::cout << " #### Receiver: This is the receiver thread. Read packets from the network and ";
-      std::cout << "push them into JB for further processing. Keep in mind that proper synchronization is necessary." << std::endl;
+      std::cout << "push them into JB for further processing. Keep in mind that proper synchronization is necessary. ####" << std::endl;
       once = false;
     }
   }

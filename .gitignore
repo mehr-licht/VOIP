@@ -2,7 +2,7 @@
 .DS_Store
 *.swp
 
-build
+build*
 
 .vscode
 *_solution

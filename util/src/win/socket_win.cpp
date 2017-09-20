@@ -299,9 +299,9 @@ uint32_t UdpSocket::sendto(Ipv4SocketAddress const& addr, std::vector<uint8_t> c
   return bytes_sent;
 }
 
-void UdpSocket::recvfrom(Ipv4SocketAddress& addr, std::vector<uint8_t>& data, uint32_t maxSize, bool bBlock, bool bPeek, bool bWaitAll) {
+uint32_t UdpSocket::recvfrom(Ipv4SocketAddress& addr, std::vector<uint8_t>& data, uint32_t maxSize, bool bBlock, bool bPeek, bool bWaitAll) {
   if (!isOpen())
-    return;
+    return 0;
 
   // helper variables
   struct sockaddr*  a     = NULL;
@@ -329,7 +329,7 @@ void UdpSocket::recvfrom(Ipv4SocketAddress& addr, std::vector<uint8_t>& data, ui
   uint32_t toread = maxSize ? maxSize : data.capacity();
   if (maxSize > data.capacity()) {
     std::cerr << "Data to read over buffer capacity!" << std::endl;
-    return;
+    return 0;
   }
 
   int32_t read_bytes = ::recvfrom(pImpl_->sockfd, (char*)&data[0], toread, flags, a, &a_len);
@@ -337,7 +337,7 @@ void UdpSocket::recvfrom(Ipv4SocketAddress& addr, std::vector<uint8_t>& data, ui
   if (read_bytes == -1 || read_bytes == 0) {
     std::cerr << "Error in recvfrom: " << e << std::endl;
     data.clear();
-    return;
+    return 0;
   }
 
   if (!bBlock) {
@@ -350,6 +350,8 @@ void UdpSocket::recvfrom(Ipv4SocketAddress& addr, std::vector<uint8_t>& data, ui
   addr.setPort(ntohs(*port));
 
   data.resize(std::max(read_bytes, 0));
+
+  return read_bytes;
 }
 
 bool UdpSocket::close() {
