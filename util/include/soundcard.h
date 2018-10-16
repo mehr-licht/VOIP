@@ -55,6 +55,11 @@ public:
 public:
   SoundCard(AudioIO *audioIo);
   ~SoundCard();
+  SoundCard(SoundCard const&) = delete;
+  SoundCard(SoundCard const&&) = delete;
+  SoundCard& operator=(SoundCard const&) = delete;
+  SoundCard& operator=(SoundCard const&&) = delete;
+
 
   bool init(int inDev, int outDev, unsigned int inCh, unsigned int outCh, unsigned int sr,
             unsigned int fs, util::AudioBuffer::SampleFormat sampleFormat);
