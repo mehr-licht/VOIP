@@ -24,7 +24,7 @@ set( HDR voip_comm.h
          audiodecoder.h )
 
 # NOTE: Change this to voipcomm_yourstudentid, e.g. voipcomm_foobar4242
-set( EXECUTABLE_NAME voipcomm_default )
+set( EXECUTABLE_NAME voipcomm_marquesoliveilu83170 )
 
 if( ${EXECUTABLE_NAME} STREQUAL "voipcomm_default" )
   message( FATAL_ERROR "\n!!! NOTE !!!\nPlease change the executable name to reflect your student id!\nThe default is not allowed. CMake will now exit." )
