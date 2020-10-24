@@ -1,0 +1,4 @@
+C:\Users\luis\git\voip_workspace\build\ext\opus\celt\Debug\celt.pdb
+C:\Users\luis\git\voip_workspace\build\ext\opus\celt\celt.dir\Debug\celt.pdb
+C:\Users\luis\git\voip\build\ext\opus\celt\Debug\celt.pdb
+C:\Users\luis\git\voip\build\ext\opus\celt\celt.dir\Debug\celt.pdb

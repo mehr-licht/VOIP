@@ -1,0 +1,4 @@
+﻿  Building Custom Rule C:/Users/luis/git/voip/ext/rtaudio/CMakeLists.txt
+  RtAudio.cpp
+C:\Users\luis\git\voip\ext\rtaudio\RtAudio.cpp(4986,161): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+  rtaudio_static.vcxproj -> C:\Users\luis\git\voip_workspace\build\ext\rtaudio\Debug\rtaudio_static.lib

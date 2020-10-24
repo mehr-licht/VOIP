@@ -1,0 +1,3 @@
+﻿  Building Custom Rule C:/Users/luis/git/voip/ext/opus/tests/CMakeLists.txt
+  test_opus_padding.c
+  test_opus_padding.vcxproj -> C:\Users\luis\git\voip\build\ext\opus\tests\Release\test_opus_padding.exe

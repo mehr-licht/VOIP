@@ -1,0 +1,4 @@
+C:\Users\luis\git\voip_workspace\build\ext\opus\src\Debug\opus.pdb
+C:\Users\luis\git\voip_workspace\build\ext\opus\src\opus.dir\Debug\opus.pdb
+C:\Users\luis\git\voip\build\ext\opus\src\Debug\opus.pdb
+C:\Users\luis\git\voip\build\ext\opus\src\opus.dir\Debug\opus.pdb
