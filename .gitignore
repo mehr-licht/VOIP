@@ -2,9 +2,17 @@
 .DS_Store
 *.swp
 
-build*
+//build*
 
-.vscode
-*_solution
+//.vscode
+//*_solution
 
 x64
+
+# Visual Studio cache files
+*.aps
+*.ncb
+*.opendb
+*.opensdf
+*.sdf
+*.cachefile
