@@ -1,4 +1,4 @@
 ﻿D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: The intermediate directory (test_opus_padding.dir\Debug\) contains files shared from another project (test_opus_padding.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Building Custom Rule C:/Users/luis/git/voip_workspace/ext/opus/tests/CMakeLists.txt
+  Building Custom Rule C:/Users/luis/git/voip/ext/opus/tests/CMakeLists.txt
   test_opus_padding.c
-  test_opus_padding.vcxproj -> C:\Users\luis\git\voip\build\ext\opus\tests\Debug\test_opus_padding.exe
+  test_opus_padding.vcxproj -> C:\Users\luis\git\voip_workspace\build\ext\opus\tests\Debug\test_opus_padding.exe

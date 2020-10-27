@@ -4,8 +4,8 @@
 
 //build*
 
-//.vscode
-//*_solution
+.vscode
+*_solution
 
 x64
 
@@ -16,3 +16,7 @@ x64
 *.opensdf
 *.sdf
 *.cachefile
+
+*.tlog
+*.tlog/
+.vs

@@ -1,1 +1,4 @@
-﻿  tonegen.vcxproj -> C:\Users\luis\git\voip\build\demo\Debug\tonegen.exe
+﻿  Building Custom Rule C:/Users/luis/git/voip/demo/CMakeLists.txt
+  tonegen.cpp
+C:\Users\luis\git\voip\demo\tonegen.cpp(168,21): warning C4018: '<': signed/unsigned mismatch
+  tonegen.vcxproj -> C:\Users\luis\git\voip_workspace\build\demo\Debug\tonegen.exe

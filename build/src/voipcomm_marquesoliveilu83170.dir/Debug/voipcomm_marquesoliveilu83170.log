@@ -1,7 +1,2 @@
 ﻿D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: The intermediate directory (voipcomm_marquesoliveilu83170.dir\Debug\) contains files shared from another project (voipcomm_marquesoliveilu83170.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  main.cpp
-  voip_comm.cpp
-  sender.cpp
-  audiodecoder.cpp
-  Generating Code...
   voipcomm_marquesoliveilu83170.vcxproj -> C:\Users\luis\git\voip_workspace\build\src\Debug\voipcomm_marquesoliveilu83170.exe

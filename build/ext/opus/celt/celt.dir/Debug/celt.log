@@ -1,2 +1,21 @@
-﻿  Building Custom Rule C:/Users/luis/git/voip_workspace/ext/opus/celt/CMakeLists.txt
-  celt.vcxproj -> C:\Users\luis\git\voip\build\ext\opus\celt\Debug\celt.lib
+﻿  Building Custom Rule C:/Users/luis/git/voip/ext/opus/celt/CMakeLists.txt
+  bands.c
+  celt.c
+  celt_encoder.c
+  celt_decoder.c
+  cwrs.c
+  entcode.c
+  entdec.c
+  entenc.c
+  kiss_fft.c
+  laplace.c
+  mathops.c
+  mdct.c
+  modes.c
+  pitch.c
+  celt_lpc.c
+  quant_bands.c
+  rate.c
+  vq.c
+  Generating Code...
+  celt.vcxproj -> C:\Users\luis\git\voip_workspace\build\ext\opus\celt\Debug\celt.lib
