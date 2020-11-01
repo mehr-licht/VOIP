@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/luis/git/voip/demo
+# Install script for directory: C:/Users/luis/git/voip_workspace/demo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "d:/Program Files (x86)/VoIP")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/VoIP")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

@@ -78,7 +78,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\luis\git\voip\ext\opus\.;C:\Users\luis\git\voip\ext\opus\include;C:\Users\luis\git\voip\ext\opus\celt;C:\Users\luis\git\voip\ext\opus\silk;C:\Users\luis\git\voip\ext\opus\silk\float;C:\Users\luis\git\voip\ext\opus\silk\fixed;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\luis\git\voip_workspace\ext\opus\.;C:\Users\luis\git\voip_workspace\ext\opus\include;C:\Users\luis\git\voip_workspace\ext\opus\celt;C:\Users\luis\git\voip_workspace\ext\opus\silk;C:\Users\luis\git\voip_workspace\ext\opus\silk\float;C:\Users\luis\git\voip_workspace\ext\opus\silk\fixed;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -95,10 +95,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;HAVE_CONFIG_H=1;USE_ALLOCA=1;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\luis\git\voip\ext\opus\.;C:\Users\luis\git\voip\ext\opus\include;C:\Users\luis\git\voip\ext\opus\celt;C:\Users\luis\git\voip\ext\opus\silk;C:\Users\luis\git\voip\ext\opus\silk\float;C:\Users\luis\git\voip\ext\opus\silk\fixed;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\luis\git\voip_workspace\ext\opus\.;C:\Users\luis\git\voip_workspace\ext\opus\include;C:\Users\luis\git\voip_workspace\ext\opus\celt;C:\Users\luis\git\voip_workspace\ext\opus\silk;C:\Users\luis\git\voip_workspace\ext\opus\silk\float;C:\Users\luis\git\voip_workspace\ext\opus\silk\fixed;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\luis\git\voip\ext\opus\.;C:\Users\luis\git\voip\ext\opus\include;C:\Users\luis\git\voip\ext\opus\celt;C:\Users\luis\git\voip\ext\opus\silk;C:\Users\luis\git\voip\ext\opus\silk\float;C:\Users\luis\git\voip\ext\opus\silk\fixed;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\luis\git\voip_workspace\ext\opus\.;C:\Users\luis\git\voip_workspace\ext\opus\include;C:\Users\luis\git\voip_workspace\ext\opus\celt;C:\Users\luis\git\voip_workspace\ext\opus\silk;C:\Users\luis\git\voip_workspace\ext\opus\silk\float;C:\Users\luis\git\voip_workspace\ext\opus\silk\fixed;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -111,7 +111,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\luis\git\voip\ext\opus\.;C:\Users\luis\git\voip\ext\opus\include;C:\Users\luis\git\voip\ext\opus\celt;C:\Users\luis\git\voip\ext\opus\silk;C:\Users\luis\git\voip\ext\opus\silk\float;C:\Users\luis\git\voip\ext\opus\silk\fixed;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\luis\git\voip_workspace\ext\opus\.;C:\Users\luis\git\voip_workspace\ext\opus\include;C:\Users\luis\git\voip_workspace\ext\opus\celt;C:\Users\luis\git\voip_workspace\ext\opus\silk;C:\Users\luis\git\voip_workspace\ext\opus\silk\float;C:\Users\luis\git\voip_workspace\ext\opus\silk\fixed;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>
       </ExceptionHandling>
@@ -128,10 +128,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H=1;USE_ALLOCA=1;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\luis\git\voip\ext\opus\.;C:\Users\luis\git\voip\ext\opus\include;C:\Users\luis\git\voip\ext\opus\celt;C:\Users\luis\git\voip\ext\opus\silk;C:\Users\luis\git\voip\ext\opus\silk\float;C:\Users\luis\git\voip\ext\opus\silk\fixed;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\luis\git\voip_workspace\ext\opus\.;C:\Users\luis\git\voip_workspace\ext\opus\include;C:\Users\luis\git\voip_workspace\ext\opus\celt;C:\Users\luis\git\voip_workspace\ext\opus\silk;C:\Users\luis\git\voip_workspace\ext\opus\silk\float;C:\Users\luis\git\voip_workspace\ext\opus\silk\fixed;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\luis\git\voip\ext\opus\.;C:\Users\luis\git\voip\ext\opus\include;C:\Users\luis\git\voip\ext\opus\celt;C:\Users\luis\git\voip\ext\opus\silk;C:\Users\luis\git\voip\ext\opus\silk\float;C:\Users\luis\git\voip\ext\opus\silk\fixed;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\luis\git\voip_workspace\ext\opus\.;C:\Users\luis\git\voip_workspace\ext\opus\include;C:\Users\luis\git\voip_workspace\ext\opus\celt;C:\Users\luis\git\voip_workspace\ext\opus\silk;C:\Users\luis\git\voip_workspace\ext\opus\silk\float;C:\Users\luis\git\voip_workspace\ext\opus\silk\fixed;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\luis\git\voip\ext\opus\.;C:\Users\luis\git\voip\ext\opus\include;C:\Users\luis\git\voip\ext\opus\celt;C:\Users\luis\git\voip\ext\opus\silk;C:\Users\luis\git\voip\ext\opus\silk\float;C:\Users\luis\git\voip\ext\opus\silk\fixed;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\luis\git\voip_workspace\ext\opus\.;C:\Users\luis\git\voip_workspace\ext\opus\include;C:\Users\luis\git\voip_workspace\ext\opus\celt;C:\Users\luis\git\voip_workspace\ext\opus\silk;C:\Users\luis\git\voip_workspace\ext\opus\silk\float;C:\Users\luis\git\voip_workspace\ext\opus\silk\fixed;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>
       </ExceptionHandling>
@@ -161,10 +161,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H=1;USE_ALLOCA=1;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\luis\git\voip\ext\opus\.;C:\Users\luis\git\voip\ext\opus\include;C:\Users\luis\git\voip\ext\opus\celt;C:\Users\luis\git\voip\ext\opus\silk;C:\Users\luis\git\voip\ext\opus\silk\float;C:\Users\luis\git\voip\ext\opus\silk\fixed;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\luis\git\voip_workspace\ext\opus\.;C:\Users\luis\git\voip_workspace\ext\opus\include;C:\Users\luis\git\voip_workspace\ext\opus\celt;C:\Users\luis\git\voip_workspace\ext\opus\silk;C:\Users\luis\git\voip_workspace\ext\opus\silk\float;C:\Users\luis\git\voip_workspace\ext\opus\silk\fixed;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\luis\git\voip\ext\opus\.;C:\Users\luis\git\voip\ext\opus\include;C:\Users\luis\git\voip\ext\opus\celt;C:\Users\luis\git\voip\ext\opus\silk;C:\Users\luis\git\voip\ext\opus\silk\float;C:\Users\luis\git\voip\ext\opus\silk\fixed;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\luis\git\voip_workspace\ext\opus\.;C:\Users\luis\git\voip_workspace\ext\opus\include;C:\Users\luis\git\voip_workspace\ext\opus\celt;C:\Users\luis\git\voip_workspace\ext\opus\silk;C:\Users\luis\git\voip_workspace\ext\opus\silk\float;C:\Users\luis\git\voip_workspace\ext\opus\silk\fixed;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -177,7 +177,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\luis\git\voip\ext\opus\.;C:\Users\luis\git\voip\ext\opus\include;C:\Users\luis\git\voip\ext\opus\celt;C:\Users\luis\git\voip\ext\opus\silk;C:\Users\luis\git\voip\ext\opus\silk\float;C:\Users\luis\git\voip\ext\opus\silk\fixed;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\luis\git\voip_workspace\ext\opus\.;C:\Users\luis\git\voip_workspace\ext\opus\include;C:\Users\luis\git\voip_workspace\ext\opus\celt;C:\Users\luis\git\voip_workspace\ext\opus\silk;C:\Users\luis\git\voip_workspace\ext\opus\silk\float;C:\Users\luis\git\voip_workspace\ext\opus\silk\fixed;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling>
@@ -193,10 +193,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;HAVE_CONFIG_H=1;USE_ALLOCA=1;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\luis\git\voip\ext\opus\.;C:\Users\luis\git\voip\ext\opus\include;C:\Users\luis\git\voip\ext\opus\celt;C:\Users\luis\git\voip\ext\opus\silk;C:\Users\luis\git\voip\ext\opus\silk\float;C:\Users\luis\git\voip\ext\opus\silk\fixed;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\luis\git\voip_workspace\ext\opus\.;C:\Users\luis\git\voip_workspace\ext\opus\include;C:\Users\luis\git\voip_workspace\ext\opus\celt;C:\Users\luis\git\voip_workspace\ext\opus\silk;C:\Users\luis\git\voip_workspace\ext\opus\silk\float;C:\Users\luis\git\voip_workspace\ext\opus\silk\fixed;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\luis\git\voip\ext\opus\.;C:\Users\luis\git\voip\ext\opus\include;C:\Users\luis\git\voip\ext\opus\celt;C:\Users\luis\git\voip\ext\opus\silk;C:\Users\luis\git\voip\ext\opus\silk\float;C:\Users\luis\git\voip\ext\opus\silk\fixed;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\luis\git\voip_workspace\ext\opus\.;C:\Users\luis\git\voip_workspace\ext\opus\include;C:\Users\luis\git\voip_workspace\ext\opus\celt;C:\Users\luis\git\voip_workspace\ext\opus\silk;C:\Users\luis\git\voip_workspace\ext\opus\silk\float;C:\Users\luis\git\voip_workspace\ext\opus\silk\fixed;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -208,11 +208,11 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\luis\git\voip\ext\opus\src\CMakeLists.txt">
+    <CustomBuild Include="C:\Users\luis\git\voip_workspace\ext\opus\src\CMakeLists.txt">
       <StdOutEncoding>UTF-8</StdOutEncoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/luis/git/voip/ext/opus/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/luis/git/voip_workspace/ext/opus/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"D:\Program Files\CMake\bin\cmake.exe" -SC:/Users/luis/git/voip -BC:/Users/luis/git/voip_workspace/build --check-stamp-file C:/Users/luis/git/voip_workspace/build/ext/opus/src/CMakeFiles/generate.stamp
+"D:\Program Files\CMake\bin\cmake.exe" -SC:/Users/luis/git/voip_workspace -BC:/Users/luis/git/voip_workspace/build --check-stamp-file C:/Users/luis/git/voip_workspace/build/ext/opus/src/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -223,9 +223,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\luis\git\voip_workspace\build\ext\opus\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/luis/git/voip/ext/opus/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/luis/git/voip_workspace/ext/opus/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"D:\Program Files\CMake\bin\cmake.exe" -SC:/Users/luis/git/voip -BC:/Users/luis/git/voip_workspace/build --check-stamp-file C:/Users/luis/git/voip_workspace/build/ext/opus/src/CMakeFiles/generate.stamp
+"D:\Program Files\CMake\bin\cmake.exe" -SC:/Users/luis/git/voip_workspace -BC:/Users/luis/git/voip_workspace/build --check-stamp-file C:/Users/luis/git/voip_workspace/build/ext/opus/src/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -236,9 +236,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\luis\git\voip_workspace\build\ext\opus\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/luis/git/voip/ext/opus/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/luis/git/voip_workspace/ext/opus/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"D:\Program Files\CMake\bin\cmake.exe" -SC:/Users/luis/git/voip -BC:/Users/luis/git/voip_workspace/build --check-stamp-file C:/Users/luis/git/voip_workspace/build/ext/opus/src/CMakeFiles/generate.stamp
+"D:\Program Files\CMake\bin\cmake.exe" -SC:/Users/luis/git/voip_workspace -BC:/Users/luis/git/voip_workspace/build --check-stamp-file C:/Users/luis/git/voip_workspace/build/ext/opus/src/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -249,9 +249,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\luis\git\voip_workspace\build\ext\opus\src\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/luis/git/voip/ext/opus/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/luis/git/voip_workspace/ext/opus/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"D:\Program Files\CMake\bin\cmake.exe" -SC:/Users/luis/git/voip -BC:/Users/luis/git/voip_workspace/build --check-stamp-file C:/Users/luis/git/voip_workspace/build/ext/opus/src/CMakeFiles/generate.stamp
+"D:\Program Files\CMake\bin\cmake.exe" -SC:/Users/luis/git/voip_workspace -BC:/Users/luis/git/voip_workspace/build --check-stamp-file C:/Users/luis/git/voip_workspace/build/ext/opus/src/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -265,16 +265,16 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\luis\git\voip\ext\opus\src\opus.c" />
-    <ClCompile Include="C:\Users\luis\git\voip\ext\opus\src\opus_decoder.c" />
-    <ClCompile Include="C:\Users\luis\git\voip\ext\opus\src\opus_encoder.c" />
-    <ClCompile Include="C:\Users\luis\git\voip\ext\opus\src\opus_multistream.c" />
-    <ClCompile Include="C:\Users\luis\git\voip\ext\opus\src\opus_multistream_encoder.c" />
-    <ClCompile Include="C:\Users\luis\git\voip\ext\opus\src\opus_multistream_decoder.c" />
-    <ClCompile Include="C:\Users\luis\git\voip\ext\opus\src\repacketizer.c" />
-    <ClCompile Include="C:\Users\luis\git\voip\ext\opus\src\analysis.c" />
-    <ClCompile Include="C:\Users\luis\git\voip\ext\opus\src\mlp.c" />
-    <ClCompile Include="C:\Users\luis\git\voip\ext\opus\src\mlp_data.c" />
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\ext\opus\src\opus.c" />
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\ext\opus\src\opus_decoder.c" />
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\ext\opus\src\opus_encoder.c" />
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\ext\opus\src\opus_multistream.c" />
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\ext\opus\src\opus_multistream_encoder.c" />
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\ext\opus\src\opus_multistream_decoder.c" />
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\ext\opus\src\repacketizer.c" />
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\ext\opus\src\analysis.c" />
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\ext\opus\src\mlp.c" />
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\ext\opus\src\mlp_data.c" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\Users\luis\git\voip_workspace\build\ZERO_CHECK.vcxproj">

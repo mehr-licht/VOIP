@@ -1,62 +1,62 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\luis\git\voip\src\main.cpp">
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\luis\git\voip\src\voip_comm.cpp">
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\src\voip_comm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\luis\git\voip\src\sender.cpp">
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\src\sender.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\luis\git\voip\src\receiver.cpp">
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\src\receiver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\luis\git\voip\src\simplejb.cpp">
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\src\simplejb.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\luis\git\voip\src\rtp_packer.cpp">
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\src\rtp_packer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\luis\git\voip\src\rtp_depacker.cpp">
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\src\rtp_depacker.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\luis\git\voip\src\audioencoder.cpp">
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\src\audioencoder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\luis\git\voip\src\audiodecoder.cpp">
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\src\audiodecoder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\luis\git\voip\src\voip_comm.h">
+    <ClInclude Include="C:\Users\luis\git\voip_workspace\src\voip_comm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\luis\git\voip\src\sender.h">
+    <ClInclude Include="C:\Users\luis\git\voip_workspace\src\sender.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\luis\git\voip\src\receiver.h">
+    <ClInclude Include="C:\Users\luis\git\voip_workspace\src\receiver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\luis\git\voip\src\simplejb.h">
+    <ClInclude Include="C:\Users\luis\git\voip_workspace\src\simplejb.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\luis\git\voip\src\rtp_packer.h">
+    <ClInclude Include="C:\Users\luis\git\voip_workspace\src\rtp_packer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\luis\git\voip\src\rtp_depacker.h">
+    <ClInclude Include="C:\Users\luis\git\voip_workspace\src\rtp_depacker.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\luis\git\voip\src\audioencoder.h">
+    <ClInclude Include="C:\Users\luis\git\voip_workspace\src\audioencoder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\luis\git\voip\src\audiodecoder.h">
+    <ClInclude Include="C:\Users\luis\git\voip_workspace\src\audiodecoder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\luis\git\voip\src\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\luis\git\voip_workspace\src\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">

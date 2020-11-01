@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\luis\git\voip\ext\opus\src\opus_demo.c">
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\ext\opus\src\opus_demo.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\luis\git\voip\ext\opus\src\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\luis\git\voip_workspace\ext\opus\src\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">

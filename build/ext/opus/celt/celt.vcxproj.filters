@@ -1,63 +1,63 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\luis\git\voip\ext\opus\celt\bands.c">
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\ext\opus\celt\bands.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\luis\git\voip\ext\opus\celt\celt.c">
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\ext\opus\celt\celt.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\luis\git\voip\ext\opus\celt\celt_encoder.c">
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\ext\opus\celt\celt_encoder.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\luis\git\voip\ext\opus\celt\celt_decoder.c">
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\ext\opus\celt\celt_decoder.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\luis\git\voip\ext\opus\celt\cwrs.c">
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\ext\opus\celt\cwrs.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\luis\git\voip\ext\opus\celt\entcode.c">
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\ext\opus\celt\entcode.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\luis\git\voip\ext\opus\celt\entdec.c">
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\ext\opus\celt\entdec.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\luis\git\voip\ext\opus\celt\entenc.c">
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\ext\opus\celt\entenc.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\luis\git\voip\ext\opus\celt\kiss_fft.c">
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\ext\opus\celt\kiss_fft.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\luis\git\voip\ext\opus\celt\laplace.c">
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\ext\opus\celt\laplace.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\luis\git\voip\ext\opus\celt\mathops.c">
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\ext\opus\celt\mathops.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\luis\git\voip\ext\opus\celt\mdct.c">
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\ext\opus\celt\mdct.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\luis\git\voip\ext\opus\celt\modes.c">
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\ext\opus\celt\modes.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\luis\git\voip\ext\opus\celt\pitch.c">
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\ext\opus\celt\pitch.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\luis\git\voip\ext\opus\celt\celt_lpc.c">
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\ext\opus\celt\celt_lpc.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\luis\git\voip\ext\opus\celt\quant_bands.c">
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\ext\opus\celt\quant_bands.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\luis\git\voip\ext\opus\celt\rate.c">
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\ext\opus\celt\rate.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\luis\git\voip\ext\opus\celt\vq.c">
+    <ClCompile Include="C:\Users\luis\git\voip_workspace\ext\opus\celt\vq.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\luis\git\voip\ext\opus\celt\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\luis\git\voip_workspace\ext\opus\celt\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">

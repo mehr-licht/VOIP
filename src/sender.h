@@ -9,6 +9,23 @@
 #ifndef VOIP_SENDER_H
 #define VOIP_SENDER_H
 
-class Sender {};
+#include <string>
+#include "socket.h"
+#include <audiobuffer.h>
+
+class Sender {
+public:
+	Sender();
+	~Sender();
+	util::UdpSocket s;
+	void start(std::string, int);
+	bool isRunning();
+	void send(util::AudioBuffer const&);
+	void stop();
+
+private:
+	bool running;
+	util::Ipv4SocketAddress raddr;
+};
 
 #endif /* VOIP_SENDER_H */
