@@ -1,9 +1,0 @@
-﻿  Building Custom Rule C:/Users/luis/git/voip/ext/opus/tests/CMakeLists.txt
-  opus_encode_regressions.c
-  test_opus_encode.c
-C:\Users\luis\git\voip\ext\opus\tests\test_opus_encode.c(239,10): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\luis\git\voip\ext\opus\tests\test_opus_encode.c(646,13): warning C4996: 'getenv': This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\luis\git\voip\ext\opus\tests\test_opus_encode.c(689,14): warning C4996: 'getenv': This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\luis\git\voip\ext\opus\tests\test_opus_encode.c(692,7): warning C4996: 'getenv': This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  Generating Code...
-  test_opus_encode.vcxproj -> C:\Users\luis\git\voip\build\ext\opus\tests\Release\test_opus_encode.exe

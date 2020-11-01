@@ -1,9 +1,0 @@
-﻿  Building Custom Rule C:/Users/luis/git/voip/util/CMakeLists.txt
-  audiobuffer.cpp
-  soundcard.cpp
-  socket_win.cpp
-C:\Users\luis\git\voip\util\src\win\socket_win.cpp(222,26): warning C4244: '=': conversion from 'SOCKET' to 'int', possible loss of data
-C:\Users\luis\git\voip\util\src\win\socket_win.cpp(285,94): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\luis\git\voip\util\src\win\socket_win.cpp(329,56): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
-  Generating Code...
-  voiputil.vcxproj -> C:\Users\luis\git\voip_workspace\build\util\Debug\voiputil.lib

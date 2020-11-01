@@ -16,7 +16,7 @@ Sender::~Sender() {	if (running) stop(); }
 void Sender::start(std::string receiverIp, int receiverPort)
 {
 	running = true;
-	//		util::Ipv4SocketAddress raddr(destIp.getValue(), rport.getValue());  está no start
+	//util::Ipv4SocketAddress raddr(destIp.getValue(), rport.getValue()); // está no start
 	util::Ipv4SocketAddress address(receiverIp, receiverPort);
 	raddr = address;
 

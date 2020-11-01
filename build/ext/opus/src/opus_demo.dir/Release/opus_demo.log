@@ -1,5 +1,0 @@
-﻿  Building Custom Rule C:/Users/luis/git/voip/ext/opus/src/CMakeLists.txt
-  opus_demo.c
-C:\Users\luis\git\voip\ext\opus\src\opus_demo.c(498,11): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\luis\git\voip\ext\opus\src\opus_demo.c(516,12): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  opus_demo.vcxproj -> C:\Users\luis\git\voip\build\ext\opus\src\Release\opus_demo.exe

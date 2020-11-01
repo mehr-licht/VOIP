@@ -72,12 +72,12 @@ int VoIPComm::exec(int argc, char* argv[]) {
     // Just wait for enter
     char input;
     //  if (system("CLS")) system("clear");
-    std::cout << "Press any key to start " << std::endl;
+    std::cout << "Press ENTER to start " << std::endl;
     std::cin.get(input);
 
     if (soundcard.start()) {
         char input;
-        std::cout << "Working - press any key to stop" << std::endl;
+        std::cout << "Working - press ENTER to stop" << std::endl;
         std::cin.get(input);
 
         r.stop();
@@ -109,7 +109,7 @@ bool VoIPComm::init(int argc, char* argv[]) {
         TCLAP::ValueArg<unsigned int> s("s", "samplerate", "Samplerate (default: 44100)", false, 44100, "unsigned int", cmd);
         TCLAP::ValueArg<unsigned int> rPort("", "rPort", "Remote Port (default: 1976)", false, 1976, "unsigned int", cmd);
         TCLAP::ValueArg<unsigned int> lPort("", "lPort", "Local Port (default: 1976)", false, 1976, "unsigned int", cmd);
-        TCLAP::UnlabeledValueArg<std::string> destIp("destIp", "Destination IP address", false, "", "std::string", cmd);
+        TCLAP::UnlabeledValueArg<std::string> destIp("destIp", "Destination IP address", false, "192.168.1.199", "std::string", cmd);
 
         cmd.parse(argc, argv);
 
@@ -138,7 +138,7 @@ bool VoIPComm::init(int argc, char* argv[]) {
         destIp_ = destIp.getValue();
 
         initSoundcard();
-
+        std::cout << "destIp_: " << destIp_ << " ; rp_:" << rp_ << std::endl;
         se.start(destIp_, rp_);
         r.start(lp_);
     }

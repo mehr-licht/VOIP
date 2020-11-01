@@ -1,4 +1,0 @@
-C:\Users\luis\git\voip_workspace\build\ext\rtaudio\Debug\rtaudio_static.pdb
-C:\Users\luis\git\voip_workspace\build\ext\rtaudio\rtaudio_static.dir\Debug\rtaudio_static.pdb
-C:\Users\luis\git\voip\build\ext\rtaudio\Debug\rtaudio_static.pdb
-C:\Users\luis\git\voip\build\ext\rtaudio\rtaudio_static.dir\Debug\rtaudio_static.pdb
