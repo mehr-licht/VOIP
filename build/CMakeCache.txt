@@ -104,7 +104,7 @@ CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=/INCREMENTAL:NO
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=/debug /INCREMENTAL
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=d:/Program Files (x86)/VoIP
+CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/VoIP
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=D:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.27.29110/bin/Hostx64/x64/link.exe
@@ -219,28 +219,28 @@ Opus_BINARY_DIR:STATIC=C:/Users/luis/git/voip_workspace/build/ext/opus/src
 Opus_CELT_BINARY_DIR:STATIC=C:/Users/luis/git/voip_workspace/build/ext/opus/celt
 
 //Value Computed by CMake
-Opus_CELT_SOURCE_DIR:STATIC=C:/Users/luis/git/voip/ext/opus/celt
+Opus_CELT_SOURCE_DIR:STATIC=C:/Users/luis/git/voip_workspace/ext/opus/celt
 
 //Value Computed by CMake
 Opus_SILK_BINARY_DIR:STATIC=C:/Users/luis/git/voip_workspace/build/ext/opus/silk
 
 //Value Computed by CMake
-Opus_SILK_SOURCE_DIR:STATIC=C:/Users/luis/git/voip/ext/opus/silk
+Opus_SILK_SOURCE_DIR:STATIC=C:/Users/luis/git/voip_workspace/ext/opus/silk
 
 //Value Computed by CMake
-Opus_SOURCE_DIR:STATIC=C:/Users/luis/git/voip/ext/opus/src
+Opus_SOURCE_DIR:STATIC=C:/Users/luis/git/voip_workspace/ext/opus/src
 
 //Value Computed by CMake
 Opus_Tests_BINARY_DIR:STATIC=C:/Users/luis/git/voip_workspace/build/ext/opus/tests
 
 //Value Computed by CMake
-Opus_Tests_SOURCE_DIR:STATIC=C:/Users/luis/git/voip/ext/opus/tests
+Opus_Tests_SOURCE_DIR:STATIC=C:/Users/luis/git/voip_workspace/ext/opus/tests
 
 //Value Computed by CMake
 RtAudio_BINARY_DIR:STATIC=C:/Users/luis/git/voip_workspace/build/ext/rtaudio
 
 //Value Computed by CMake
-RtAudio_SOURCE_DIR:STATIC=C:/Users/luis/git/voip/ext/rtaudio
+RtAudio_SOURCE_DIR:STATIC=C:/Users/luis/git/voip_workspace/ext/rtaudio
 
 //Build demo applications.
 VOIP_BUILD_DEMOS:BOOL=ON
@@ -255,22 +255,22 @@ VoIP_BINARY_DIR:STATIC=C:/Users/luis/git/voip_workspace/build
 VoIP_Communicator_BINARY_DIR:STATIC=C:/Users/luis/git/voip_workspace/build/src
 
 //Value Computed by CMake
-VoIP_Communicator_SOURCE_DIR:STATIC=C:/Users/luis/git/voip/src
+VoIP_Communicator_SOURCE_DIR:STATIC=C:/Users/luis/git/voip_workspace/src
 
 //Value Computed by CMake
 VoIP_Demos_BINARY_DIR:STATIC=C:/Users/luis/git/voip_workspace/build/demo
 
 //Value Computed by CMake
-VoIP_Demos_SOURCE_DIR:STATIC=C:/Users/luis/git/voip/demo
+VoIP_Demos_SOURCE_DIR:STATIC=C:/Users/luis/git/voip_workspace/demo
 
 //Value Computed by CMake
-VoIP_SOURCE_DIR:STATIC=C:/Users/luis/git/voip
+VoIP_SOURCE_DIR:STATIC=C:/Users/luis/git/voip_workspace
 
 //Value Computed by CMake
 VoIP_Utilities_BINARY_DIR:STATIC=C:/Users/luis/git/voip_workspace/build/util
 
 //Value Computed by CMake
-VoIP_Utilities_SOURCE_DIR:STATIC=C:/Users/luis/git/voip/util
+VoIP_Utilities_SOURCE_DIR:STATIC=C:/Users/luis/git/voip_workspace/util
 
 //Dependencies for the target
 opus_LIB_DEPENDS:STATIC=general;celt;general;silk;
@@ -345,7 +345,7 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=C:/Users/luis/git/voip
+CMAKE_HOME_DIRECTORY:INTERNAL=C:/Users/luis/git/voip_workspace
 //ADVANCED property for variable: CMAKE_LINKER
 CMAKE_LINKER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS

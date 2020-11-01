@@ -9,7 +9,7 @@ The output was:
 Microsoft (R) Build Engine version 16.7.0+b89cb5fde for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 24/10/2020 22:37:28.
+Build started 01/11/2020 23:01:48.
 Project "C:\Users\luis\git\voip_workspace\build\CMakeFiles\3.18.4\CompilerIdC\CompilerIdC.vcxproj" on node 1 (default targets).
 PrepareForBuild:
   Creating directory "Debug\".
@@ -35,7 +35,7 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:00.87
+Time Elapsed 00:00:02.40
 
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -54,7 +54,7 @@ The output was:
 Microsoft (R) Build Engine version 16.7.0+b89cb5fde for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 24/10/2020 22:37:30.
+Build started 01/11/2020 23:01:51.
 Project "C:\Users\luis\git\voip_workspace\build\CMakeFiles\3.18.4\CompilerIdCXX\CompilerIdCXX.vcxproj" on node 1 (default targets).
 PrepareForBuild:
   Creating directory "Debug\".
@@ -80,7 +80,7 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:00.58
+Time Elapsed 00:00:01.10
 
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -92,28 +92,28 @@ The CXX compiler identification is MSVC, found in "C:/Users/luis/git/voip_worksp
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: C:/Users/luis/git/voip_workspace/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):d:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_29683.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.7.0+b89cb5fde for .NET Framework
+Run Build Command(s):d:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_0b12a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.7.0+b89cb5fde for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
   Microsoft (R) C/C++ Optimizing Compiler Version 19.27.29112 for x64
-  Copyright (C) Microsoft Corporation.  All rights reserved.
   CMakeCCompilerABI.c
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_29683.dir\Debug\\" /Fd"cmTC_29683.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue "D:\Program Files\CMake\share\cmake-3.18\Modules\CMakeCCompilerABI.c"
-  cmTC_29683.vcxproj -> C:\Users\luis\git\voip_workspace\build\CMakeFiles\CMakeTmp\Debug\cmTC_29683.exe
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0b12a.dir\Debug\\" /Fd"cmTC_0b12a.dir\Debug\vc142.pdb" /Gd /TC /errorReport:queue "D:\Program Files\CMake\share\cmake-3.18\Modules\CMakeCCompilerABI.c"
+  cmTC_0b12a.vcxproj -> C:\Users\luis\git\voip_workspace\build\CMakeFiles\CMakeTmp\Debug\cmTC_0b12a.exe
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: C:/Users/luis/git/voip_workspace/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):d:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_fc56a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.7.0+b89cb5fde for .NET Framework
+Run Build Command(s):d:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_34d59.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft (R) Build Engine version 16.7.0+b89cb5fde for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
   Microsoft (R) C/C++ Optimizing Compiler Version 19.27.29112 for x64
-  Copyright (C) Microsoft Corporation.  All rights reserved.
   CMakeCXXCompilerABI.cpp
-  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_fc56a.dir\Debug\\" /Fd"cmTC_fc56a.dir\Debug\vc142.pdb" /Gd /TP /errorReport:queue "D:\Program Files\CMake\share\cmake-3.18\Modules\CMakeCXXCompilerABI.cpp"
-  cmTC_fc56a.vcxproj -> C:\Users\luis\git\voip_workspace\build\CMakeFiles\CMakeTmp\Debug\cmTC_fc56a.exe
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_34d59.dir\Debug\\" /Fd"cmTC_34d59.dir\Debug\vc142.pdb" /Gd /TP /errorReport:queue "D:\Program Files\CMake\share\cmake-3.18\Modules\CMakeCXXCompilerABI.cpp"
+  cmTC_34d59.vcxproj -> C:\Users\luis\git\voip_workspace\build\CMakeFiles\CMakeTmp\Debug\cmTC_34d59.exe
 
 
 

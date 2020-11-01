@@ -33,31 +33,54 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
  * IN THE SOFTWARE.
  */
-/******************************************************************************/
-
+ /******************************************************************************/
+	
 #ifndef VOIP_COMM_H
 #define VOIP_COMM_H
 
+#ifdef __cplusplus__
+#include <cstdlib>
+#else
+#include <stdlib.h>
+#endif
+
 #include "soundcard.h"
+#include "sender.h"
+#include "receiver.h"
 
 // This is the application entry point
 class VoIPComm : public util::AudioIO {
 public:
-  VoIPComm();
-  ~VoIPComm();
-  VoIPComm(VoIPComm const&)            = delete;
-  VoIPComm(VoIPComm&&)                 = delete;
-  VoIPComm& operator=(VoIPComm const&) = delete;
-  VoIPComm& operator=(VoIPComm&&)      = delete;
+	VoIPComm();
+	~VoIPComm();
+	VoIPComm(VoIPComm const&) = delete;
+	VoIPComm(VoIPComm&&) = delete;
+	VoIPComm& operator=(VoIPComm const&) = delete;
+	VoIPComm& operator=(VoIPComm&&) = delete;
 
-  int exec(int argc, char *argv[]);
+	int exec(int argc, char* argv[]);
 
-  // Callback for Soundcard
-  int process(util::AudioBuffer& output, util::AudioBuffer const& input);
+	// Callback for Soundcard
+	int process(util::AudioBuffer& output, util::AudioBuffer const& input);
 
 private:
-  bool init(int argc, char *argv[]);
-  void listDevices();
+	bool init(int argc, char* argv[]);
+	void listDevices();
+	void initSoundcard();
+	util::SoundCard soundcard;
+
+	Sender se;
+	Receiver r;
+
+	int s_;
+	int fs_;
+	unsigned int rp_;
+	unsigned int lp_;
+	int inDev_;
+	int outDev_;
+	unsigned int inCh_;
+	unsigned int outCh_;
+	std::string destIp_;
 };
 
 #endif /* VOIP_COMM_H */
