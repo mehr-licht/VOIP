@@ -47,6 +47,8 @@
 #include "soundcard.h"
 #include "sender.h"
 #include "receiver.h"
+#include "simpleJB.h"
+using namespace std;
 
 // This is the application entry point
 class VoIPComm : public util::AudioIO {
@@ -80,7 +82,9 @@ private:
 	int outDev_;
 	unsigned int inCh_;
 	unsigned int outCh_;
-	std::string destIp_;
+	string destIp_;
+
+	jBuffer jBuffer;
 };
 
 #endif /* VOIP_COMM_H */

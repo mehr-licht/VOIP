@@ -8,6 +8,8 @@
 
 #include "receiver.h"
 #include <iostream>
+using namespace std;
+
 
 Receiver::Receiver()
   : self_(),
@@ -20,21 +22,22 @@ Receiver::~Receiver() {
   }
 }
 
-void Receiver::start(int port) {
+void Receiver::start(int port, jBuffer* jb_) {
+  jBuffer_ = jb_;
   running_ = true;
   util::Ipv4SocketAddress saddr("", port);
   addr = saddr;
   s.open();
   if (s.isOpen()) {//metihe
-      std::cerr << "Socket is open. Listening... " << std::endl;//metihe
+      cerr << "Socket is open. Listening... " << endl;//metihe
   }
   if (!s.bind(addr)) {
-      std::cerr << "Error binding socket!" << std::endl;
+      cerr << "Error binding socket!" << endl;
       s.close();
       exit(-1);
   }
 
-  self_ = std::thread( [=] { receive(); });
+  self_ = thread( [=] { receive(); });
 }
 
 void Receiver::stop() {
@@ -48,20 +51,22 @@ void Receiver::receive() {
   while (running_) {
    
     if (once) {
-      std::cout << " #### Receiver: This is the receiver thread. Read packets from the network and ";
-      std::cout << "push them into JB for further processing. Keep in mind that proper synchronization is necessary. ####" << std::endl;
+      cout << " #### Receiver: This is the receiver thread. Read packets from the network and ";
+      cout << "push them into JB for further processing. Keep in mind that proper synchronization is necessary. ####" << endl;
       once = false;
     }
   }
 
   while (running_) {
-      std::vector<uint8_t> data(128, 0);
+      vector<uint8_t> data(2048, 0);//128, 0
       util::Ipv4SocketAddress from;
       s.recvfrom(from, data, 128);
 
-      std::cerr << "Received " << data.size() << " bytes from " << from.toString(true) << std::endl;
-      std::string msg(reinterpret_cast<const char*>(&data[0]), data.size());
-      std::cerr << "Message: " << msg << std::endl;
+      cerr << "Received " << data.size() << " bytes from " << from.toString(true) << endl;
+      string msg(reinterpret_cast<const char*>(&data[0]), data.size());
+      cerr << "Message: " << msg << endl;
+
+      jBuffer_->add(data);
   }
 
 }
@@ -71,6 +76,9 @@ bool Receiver::isRunning()
     return false;
 }
 
-void Receiver::get(util::AudioBuffer&)
+
+void Receiver::get(util::AudioBuffer& scOutput) 
 {
+    vector<uint8_t> frame = jBuffer_->fetchFrame();
+    ::memcpy(scOutput.data(), &frame[0], frame.size());
 }

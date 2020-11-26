@@ -13,13 +13,15 @@
 #include <iostream>
 #include <audiobuffer.h>
 #include "socket.h"
+#include "simplejb.h"
+using namespace std;
 
 class Receiver {
 public:
   Receiver();
   ~Receiver();
-  //void start(int, SimpleJB*, int);
-  void start(int);
+  //void start(int, jBuffer*, int);
+  void start(int, jBuffer*);
   bool isRunning();
   void get(util::AudioBuffer&);
   void stop();
@@ -29,13 +31,13 @@ public:
 private:
   void receive();
 
-  std::thread self_;
+  thread self_;
   bool        running_;
 
   //int			port;
   util::Ipv4SocketAddress addr;
   util::UdpSocket s;
-
+  jBuffer* jBuffer_;
   //int			maxUnitSize;
 
   //unsigned int	outCh_;

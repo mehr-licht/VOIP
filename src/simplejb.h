@@ -9,6 +9,38 @@
 #ifndef VOIP_SIMPLEJB_H
 #define VOIP_SIMPLEJB_H
 
-class SimpleJB {};
+#include <vector>
+#include "audiobuffer.h"
+using namespace std;
 
-#endif /* VOIP_SIMPLEJB_H */
+class jBuffer {
+public:
+	jBuffer();
+	~jBuffer();
+
+	void add(vector<uint8_t>);
+	void addToBufferW();
+	void addToBuffer(util::ByteBuffer& data);
+	void addToWaiting(util::ByteBuffer& data);
+	vector<uint8_t> fetchFrame();
+	void checkCapacity(const uint32_t& nBytes, util::ByteBuffer& frame);
+	void config(int, unsigned int, int);
+
+private:
+	void checkLocking();
+	void checkWaitSize();
+	void setLock(bool);
+
+	vector<uint8_t> buffer;
+	vector<uint8_t> waitingPackages;
+
+	int            frameSize_;
+	unsigned int   nChannels_;
+	int            sampleRate_;
+	util::AudioBuffer::SampleFormat	format_;
+	bool				locked;
+};
+
+
+
+#endif /* VOIP_jBuffer_H */

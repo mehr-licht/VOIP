@@ -41,9 +41,8 @@
 #include "soundcard.h"
 
 #include "receiver.h"
-
 #include "tclap/CmdLine.h"
-
+using namespace std;
 
 int VoIPComm::process(util::AudioBuffer& output, util::AudioBuffer const& input) {
     //s.send(input);
@@ -51,40 +50,43 @@ int VoIPComm::process(util::AudioBuffer& output, util::AudioBuffer const& input)
     return 0; // This is currently a no-op
 }
 
-VoIPComm::VoIPComm() : soundcard(this), s_(44100), fs_(512), inDev_(3), outDev_(0), inCh_(1), outCh_(1), rp_(1976), lp_(1976), destIp_("") {}
+//in 3 = laptop realtek micro stereo
+//out 0= BT phones stereo
+//out 2= laptop realtek speakers stereo
+VoIPComm::VoIPComm() : soundcard(this), s_(44100), fs_(512), inDev_(3), outDev_(0), inCh_(2), outCh_(2), rp_(1976), lp_(1976), destIp_("") {}
 VoIPComm::~VoIPComm() {}
 
 int VoIPComm::exec(int argc, char* argv[]) {
 
     if (!init(argc, argv)) {
-        std::cerr << "Error initializing!" << std::endl;
+        cerr << "Error initializing!" << endl;
         return -1;
     }
     
    
     // Start the sound card and process I/O
-    //std::cout << " ** Now you should start the soundcard and begin to process I/O." << std::endl;
-    //std::cout << " ** Note: because the receiver runs in parallel, you may read this message before the message printed" << std::endl;
-    //std::cout << " ** by the receiver or they may even be interleaved!" << std::endl;
-    //std::cout << std::endl;
-    //std::cout << std::endl << " ** Actually, this implementation is just a dummy. Press enter to exit..." << std::endl;
+    //cout << " ** Now you should start the soundcard and begin to process I/O." << endl;
+    //cout << " ** Note: because the receiver runs in parallel, you may read this message before the message printed" << endl;
+    //cout << " ** by the receiver or they may even be interleaved!" << endl;
+    //cout << endl;
+    //cout << endl << " ** Actually, this implementation is just a dummy. Press enter to exit..." << endl;
 
     // Just wait for enter
     char input;
     //  if (system("CLS")) system("clear");
-    std::cout << "Press ENTER to start " << std::endl;
-    std::cin.get(input);
+    cout << "Press ENTER to start " << endl;
+    cin.get(input);
 
     if (soundcard.start()) {
         char input;
-        std::cout << "Working - press ENTER to stop" << std::endl;
-        std::cin.get(input);
+        cout << "Working - press ENTER to stop" << endl;
+        cin.get(input);
 
         r.stop();
         se.stop();
         soundcard.stop();
 
-        std::cout << "Soundcard stopped!" << std::endl;
+        cout << "Soundcard stopped!" << endl;
     }
     r.~Receiver();//apagar
     se.~Sender();//apagar
@@ -109,7 +111,7 @@ bool VoIPComm::init(int argc, char* argv[]) {
         TCLAP::ValueArg<unsigned int> s("s", "samplerate", "Samplerate (default: 44100)", false, 44100, "unsigned int", cmd);
         TCLAP::ValueArg<unsigned int> rPort("", "rPort", "Remote Port (default: 1976)", false, 1976, "unsigned int", cmd);
         TCLAP::ValueArg<unsigned int> lPort("", "lPort", "Local Port (default: 1976)", false, 1976, "unsigned int", cmd);
-        TCLAP::UnlabeledValueArg<std::string> destIp("destIp", "Destination IP address", false, "192.168.1.199", "std::string", cmd);
+        TCLAP::UnlabeledValueArg<string> destIp("destIp", "Destination IP address", false, "192.168.1.199", "string", cmd);
 
         cmd.parse(argc, argv);
 
@@ -125,7 +127,7 @@ bool VoIPComm::init(int argc, char* argv[]) {
             TCLAP::StdOutput().usage(cmd);
             exit(-1);
         }
-        std::cout << destIp.getValue() << std::endl;
+        cout << destIp.getValue() << endl;
         //assign cmdline arguments to variables
         s_ = s.getValue();
         fs_ = fs.getValue();
@@ -136,14 +138,14 @@ bool VoIPComm::init(int argc, char* argv[]) {
         inCh_ = inCh.getValue();
         outCh_ = outCh.getValue();
         destIp_ = destIp.getValue();
-
+        jBuffer.config(fs_, outCh_, s_);
         initSoundcard();
-        std::cout << "destIp_: " << destIp_ << " ; rp_:" << rp_ << std::endl;
+        cout << "destIp_: " << destIp_ << " ; rp_:" << rp_ << endl;
         se.start(destIp_, rp_);
-        r.start(lp_);
+        r.start(lp_, &jBuffer);
     }
     catch (TCLAP::ArgException& argEx) {
-        std::cerr << "Error parsing command line arguments: " << argEx.error() << " for argument " << argEx.argId() << std::endl;
+        cerr << "Error parsing command line arguments: " << argEx.error() << " for argument " << argEx.argId() << endl;
         return false;
     }
 

@@ -12,13 +12,14 @@
 #include <string>
 #include "socket.h"
 #include <audiobuffer.h>
+using namespace std;
 
 class Sender {
 public:
 	Sender();
 	~Sender();
 	util::UdpSocket s;
-	void start(std::string, int);
+	void start(string, int);
 	bool isRunning();
 	void send(util::AudioBuffer const&);
 	void stop();
