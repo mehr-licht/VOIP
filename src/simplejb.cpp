@@ -10,9 +10,9 @@
 using namespace std;
 
 jBuffer::jBuffer() :
-	frameSize_(512), 
-	nChannels_(2), // 2   EXPERIMENTAR
-	sampleRate_(44100), // 44100  EXPERIMENTAR
+	frameSize_(512),
+	nChannels_(2),
+	sampleRate_(44100),
 	format_(util::AudioBuffer::FLOAT32),
 	locked(false)
 {}

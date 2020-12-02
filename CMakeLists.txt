@@ -41,9 +41,9 @@ add_subdirectory( util )
 #Todo: add opus if build
 #Todo: fix linux build
 if( ${CMAKE_SYSTEM_NAME} STREQUAL Windows)
-	set( VOIP_EXT_LIBS voiputil rtaudio_static opus ws2_32)
+	set( VOIP_EXT_LIBS voiputil rtaudio_static ws2_32)
 else()
-	set( VOIP_EXT_LIBS voiputil rtaudio opus)
+	set( VOIP_EXT_LIBS voiputil rtaudio)
 endif()
 
 if( ${VOIP_BUILD_DEMOS} )

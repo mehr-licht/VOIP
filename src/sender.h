@@ -12,21 +12,27 @@
 #include <string>
 #include "socket.h"
 #include <audiobuffer.h>
+#include "rtp_packer.h"
 using namespace std;
 
 class Sender {
 public:
 	Sender();
 	~Sender();
-	util::UdpSocket s;
-	void start(string, int);
+	
+	void start(string, int, int);
 	bool isRunning();
 	void send(util::AudioBuffer const&);
+	void loopToPrepare(float fractions, util::ByteBuffer& data, uint32_t& send_cnt);
+	void prepare(uint32_t& send_cnt, util::ByteBuffer& unit);
 	void stop();
 
 private:
 	bool running;
+	util::UdpSocket s;
 	util::Ipv4SocketAddress raddr;
+	RtpPacker	rtpWrapper;
+	int	size_;
 };
 
 #endif /* VOIP_SENDER_H */

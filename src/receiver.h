@@ -14,14 +14,15 @@
 #include <audiobuffer.h>
 #include "socket.h"
 #include "simplejb.h"
+#include "rtp_depacker.h"
 using namespace std;
 
 class Receiver {
 public:
   Receiver();
   ~Receiver();
-  //void start(int, jBuffer*, int);
-  void start(int, jBuffer*);
+  void start(int, jBuffer*, int);
+  //void start(int, jBuffer*);
   bool isRunning();
   void get(util::AudioBuffer&);
   void stop();
@@ -38,8 +39,8 @@ private:
   util::Ipv4SocketAddress addr;
   util::UdpSocket s;
   jBuffer* jBuffer_;
-  //int			maxUnitSize;
-
+  int max_;
+  RtpDepacker rtpDepacker;
   //unsigned int	outCh_;
 };
 
