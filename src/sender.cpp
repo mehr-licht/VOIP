@@ -10,15 +10,19 @@
 #include <iostream>"
 using namespace std;
 
-Sender::Sender() : running(false),size_(0) {}
+Sender::Sender() : running(false), size_(0), useOpus(false), ch(2), sr(24000), encoder(NULL) {}
 
-Sender::~Sender() {	if (running) stop(); }
+Sender::~Sender() { if (running) stop(); }
 
-void Sender::start(string rIP, int rPort, int size)
+void Sender::start(string rIP, int rPort, int size, bool useOpus, int channels, int samplr)
 {
+	if (useOpus)
+		setOpus();
+
+	sr = samplr;
+	ch = channels;
 	running = true;
 	size_ = size;
-	//util::Ipv4SocketAddress raddr(destIp.getValue(), rport.getValue()); // está no start
 	util::Ipv4SocketAddress address(rIP, rPort);
 	raddr = address;
 
@@ -36,24 +40,17 @@ bool Sender::isRunning()
 void Sender::send(util::AudioBuffer const& input)
 {
 	if (running) {
-		
+
 		if (s.isOpen()) {
-			cerr << "Socket is open. Sending the audio to " << raddr.toString(true) << endl;
+			cerr << "Socket is open. Sending the audio to " << raddr.toString(false) << endl;
 		}
 
-		//const char* hellostr = "hello";//muidaidiu
-		//vector<uint8_t> data(hellostr, hellostr + strlen(hellostr));//muidaidiu
-		vector<uint8_t> data(input.size(), 0);// input.size(),0
+		vector<uint8_t> data(input.size(), 0);
 		::memcpy(&data[0], input.data(), input.size());
 		float fractions = (float)data.size() / size_;
-		uint32_t send_cnt = 0, i = 0;//hádif tirouoi
+		uint32_t send_cnt = 0, i = 0;
 
-		/*while (true) {
-			send_cnt = s.sendto(raddr, data);
-			cerr << "Sent " << send_cnt << " bytes." << endl;
-		}*/
 		loopToPrepare(fractions, data, send_cnt);
-		
 	}
 	else
 		cerr << "Sender not started" << endl;
@@ -67,11 +64,9 @@ void Sender::loopToPrepare(float fractions, util::ByteBuffer& data, uint32_t& se
 		util::ByteBuffer::iterator tmp;
 		if (fractions >= i + 1) {
 			tmp = data.end();
-			//vector<uint8_t> unit(data.begin() + offset, data.end());
 		}
 		else {
 			tmp = data.begin() + offset + (int8_t)size_;
-			//vector<uint8_t> unit(data.begin() + offset, data.begin() + (offset + unitSize));
 		}
 
 		vector<uint8_t> unit(data.begin() + offset, tmp);
@@ -79,10 +74,24 @@ void Sender::loopToPrepare(float fractions, util::ByteBuffer& data, uint32_t& se
 	}
 }
 
+
+void Sender::setOpus()
+{
+	useOpus = true;
+}
+
 void Sender::prepare(uint32_t& bytesSent, util::ByteBuffer& subData)
 {
-	bytesSent = s.sendto(raddr, rtpWrapper.makePacket(subData, 10));
-	//cout << "Sent Bytes: " << send_cnt << " to: " << raddr.toString(true) << endl;
+	util::ByteBuffer& out = subData;
+	if (useOpus) {
+		encoder = new AudioEncoder(sr, ch);
+		cout << "OPUS apos new encoder" << endl;//[TODO]remover 
+		out = encoder->encode(subData, ch);//(util::AudioBuffer const& in)
+		cout << "OPUS apos create" << endl;//[TODO]remover 
+		//[TODO]remover  out = AudioEncoder::Encoder(uint32_t& bytesSent, util::ByteBuffer& out)
+	}
+	bytesSent = s.sendto(raddr, rtpWrapper.makePacket(out, PAYLOAD_TYPE));
+	cout << "Sent Bytes: " << bytesSent << " to: " << raddr.toString(true) << endl;
 	subData.clear();
 }
 

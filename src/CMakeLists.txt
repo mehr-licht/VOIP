@@ -34,4 +34,4 @@ endif()
 # to display them when generating projects for
 # your favorite IDE
 add_executable( ${EXECUTABLE_NAME} ${SRC} ${HDR})
-target_link_libraries( ${EXECUTABLE_NAME} ${VOIP_EXT_LIBS} )
+target_link_libraries( ${EXECUTABLE_NAME} ${VOIP_EXT_LIBS} opus)

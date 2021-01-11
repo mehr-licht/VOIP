@@ -11,6 +11,8 @@
 
 #include <vector>
 #include <ctime>
+#include "audioencoder.h"
+
 using namespace std;
 
 class RtpPacker {
@@ -22,28 +24,27 @@ public:
 	vector<uint8_t> makePacket(vector<uint8_t>&, uint8_t);
 
 private:
-	void makeHeader();//createHeader();
-	void setSequenceNoStart();//setStartSequNumber();
-	void setTimeStampStart();//setStartTimestamp();
-	void setSSRC();//setMySSRC();
-	
+	void makeHeader();
+	void setSequenceNoStart();
+	void setTimeStampStart();
+	void setSSRC();
+	AudioEncoder* encoder;
 	vector<uint8_t> header;
-	uint8_t		ver;
-	uint8_t		p;//padding;
-	uint8_t		x;//ext;
-	uint8_t		cc;//csrcCnt;
-	uint8_t		marker;
-	uint8_t		payloadType;//pt;
-	uint16_t	sequenceNo;//sqn;
-	uint8_t		sequenceNo1;//sqn_b1;
-	uint8_t		sequenceNo2;//sqn_b2;
-	uint32_t	timeStamp;//ts;
-	//uint32_t	ssrc;
-	uint8_t		ssrc1;//ssrc_b1;
-	uint8_t		ssrc2;//ssrc_b2;
-	uint8_t		ssrc3;//ssrc_b3;
-	uint8_t		ssrc4;//ssrc_b4;
-	uint32_t	previousTime;
+	uint8_t ver;
+	uint8_t p;
+	uint8_t x;
+	uint8_t cc;
+	uint8_t marker;
+	uint8_t  payloadType;
+	uint16_t sequenceNo;
+	uint8_t  sequenceNo1;
+	uint8_t  sequenceNo2;
+	uint32_t timeStamp;
+	uint8_t  ssrc1;
+	uint8_t  ssrc2;
+	uint8_t  ssrc3;
+	uint8_t  ssrc4;
+	uint32_t previousTime;
 };
 
 #endif /* VOIP_RTP_PACKER_H */

@@ -44,10 +44,17 @@
 #include <stdlib.h>
 #endif
 
+#define LOCALHOST "192.168.1.1"
+
 #include "soundcard.h"
 #include "sender.h"
 #include "receiver.h"
 #include "simpleJB.h"
+#include "audioencoder.h"
+#include "audiodecoder.h"
+#include "rtp_packer.h"
+#include "rtp_depacker.h"
+
 using namespace std;
 
 // This is the application entry point
@@ -85,6 +92,9 @@ private:
 	string destIp_;
 
 	jBuffer jBuffer;
+
+	RtpPacker* packer;
+	RtpDepacker* depacker;
 };
 
 #endif /* VOIP_COMM_H */

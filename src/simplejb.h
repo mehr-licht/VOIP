@@ -20,27 +20,23 @@ public:
 
 	void add(vector<uint8_t>);
 	void addToBufferW();
-	void addToBuffer(util::ByteBuffer& data);
-	void addToWaiting(util::ByteBuffer& data);
+	void addToBuffer(util::ByteBuffer&);
+	void addToWaiting(util::ByteBuffer&);
 	vector<uint8_t> fetchFrame();
-	void checkCapacity(const uint32_t& nBytes, util::ByteBuffer& frame);
+	void checkCapacity(const uint32_t&, util::ByteBuffer&);
 	void config(int, unsigned int, int);
 
 private:
 	void checkLocking();
 	void checkWaitSize();
 	void setLock(bool);
-
 	vector<uint8_t> buffer;
 	vector<uint8_t> waitingPackages;
-
-	int            frameSize_;
-	unsigned int   nChannels_;
-	int            sampleRate_;
-	util::AudioBuffer::SampleFormat	format_;
-	bool				locked;
+	int frameSize_;
+	unsigned int nChannels_;
+	int sampleRate_;
+	util::AudioBuffer::SampleFormat format_;
+	bool locked;
 };
-
-
 
 #endif /* VOIP_jBuffer_H */
